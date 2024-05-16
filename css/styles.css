@@ -198,8 +198,8 @@ h3 {
 
 .formulario {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    margin: .4rem;
 }
 .formulario__campo {
     border: 1rem solid var(--primarioOscuro);
@@ -217,7 +217,15 @@ h3 {
     font-family: var(--fuentePrincipal);
     padding: 2rem;
     transition: background-color .3s ease;
-    grid-column: 1 / 3;
+}
+@media (min-width: 768px) {
+    .formulario {
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto;
+    }
+    .formulario__submit {
+        grid-column: 1 / 3;
+    }
 }
 .formulario__submit:hover {
     cursor: pointer;
